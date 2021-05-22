@@ -16,9 +16,11 @@ import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import AntIcon from 'react-native-vector-icons/AntDesign';
-
+import LOGO_IMG from '../../assets/images/logo4.png';
+import SOS_IMG from '../../assets/images/sosRound.png';
 import CONNECTION_IMG from '../../assets/images/connection.gif';
 import BREATHING_IMG from '../../assets/images/breathing.gif';
+import ALERT_IMG from '../../assets/images/alert.png';
 
 import CircularComponent from './CircularComponent';
 
@@ -26,7 +28,7 @@ const THEME_COLOR = 'salmon';
 
 export default function CallScreen() {
   const [buttonComplete, setButtonComplete] = React.useState('SOS');
-  const [buttonColor, setButtonColor] = React.useState('black');
+  const [buttonColor, setButtonColor] = React.useState('rgb(59,56,56)');
   const [complete, setComplete] = React.useState(false);
 
   return (
@@ -47,19 +49,63 @@ export default function CallScreen() {
         ) : (
           <Text
             style={{
-              marginTop: 55,
+              marginTop: 40,
               marginBottom: 20,
               padding: 0,
               backgroundColor: 'white',
               fontWeight: '800',
-              fontSize: 20,
+              fontSize: 24,
               letterSpacing: 2,
-              color:'grey'
+              color: 'grey',
             }}>
             " Press SOS for 3 seconds "
           </Text>
         )}
       </View>
+
+      <View
+        style={{
+          padding: 40,
+          alignItems: 'center',
+        }}>
+        <Text
+          style={{
+            marginTop: 55,
+            padding: 0,
+            backgroundColor: 'white',
+            fontWeight: '800',
+            fontSize: 20,
+            letterSpacing: 2,
+            color: 'grey',
+          }}>
+          "ABCDEFGasfdsdadsafsadsfdaHIJK"
+        </Text>
+        <Text
+          style={{
+            marginTop: 55,
+            padding: 0,
+            backgroundColor: 'white',
+            fontWeight: '800',
+            fontSize: 20,
+            letterSpacing: 2,
+            color: 'grey',
+          }}>
+          "ABCDEFGHfsdfsfsdfIJK"
+        </Text>
+        <Text
+          style={{
+            marginTop: 55,
+            padding: 0,
+            backgroundColor: 'white',
+            fontWeight: '800',
+            fontSize: 20,
+            letterSpacing: 2,
+            color: 'grey',
+          }}>
+          "ABCDEFGHIJK"
+        </Text>
+      </View>
+
       <View
         style={{
           flex: 1,
@@ -81,35 +127,44 @@ export default function CallScreen() {
         )}
 
         {complete ? (
-          <View
+          <Image
+            source={LOGO_IMG}
             style={{
+              width: 250,
+              height: 250,
               justifyContent: 'center',
               alignContent: 'center',
-              padding: 125,
-              borderRadius: 300,
-              backgroundColor: 'salmon',
-            }}></View>
+            }}></Image>
         ) : (
-          <FillUpButton
-            increment={0.02}
-            buttonBackgroundColor={buttonColor}
-            fillupColor={'salmon'}
-            height={140}
-            width={280}
-            buttonText={buttonComplete}
-            incrementSpeed={10}
-            buttonTextStyle={
-              buttonComplete == 'SOS'
-                ? {fontSize: 34, color: 'white', fontWeight: 'bold'}
-                : {fontSize: 20, color: 'white', fontWeight: 'bold'}
-            }
-            activeOpacity={0.8}
-            onFilled={() => {
-              setButtonComplete('');
-              setButtonColor('salmon');
-              setComplete(true);
-            }}
-          />
+          <>
+            {/* <Image source={SOS_IMG} style={{position: 'absolute'}}></Image> */}
+            <View style={{marginBottom: -50}}>
+              <Image
+                source={ALERT_IMG}
+                style={{marginBottom: -18, marginLeft: -15}}></Image>
+
+              <FillUpButton
+                increment={0.02}
+                buttonBackgroundColor={buttonColor}
+                fillupColor={'salmon'}
+                height={40}
+                width={320}
+                buttonText={buttonComplete}
+                incrementSpeed={10}
+                buttonTextStyle={
+                  buttonComplete == 'SOS'
+                    ? {fontSize: 34, color: 'white', fontWeight: 'bold'}
+                    : {fontSize: 20, color: 'white', fontWeight: 'bold'}
+                }
+                activeOpacity={0.8}
+                onFilled={() => {
+                  setButtonComplete('');
+                  setButtonColor('salmon');
+                  setComplete(true);
+                }}
+              />
+            </View>
+          </>
         )}
         {complete ? (
           <Text style={{width: 250, color: 'grey', marginTop: 15}}>
