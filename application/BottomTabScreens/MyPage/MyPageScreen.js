@@ -41,7 +41,7 @@ const list = [
     type: ''
   },
   {
-    title: 'Cictize Heros',
+    title: 'Citizen Heros',
     icon: 'supervised-user-circle',
     type: ''
   },

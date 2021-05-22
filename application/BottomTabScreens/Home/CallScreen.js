@@ -52,12 +52,11 @@ export default function CallScreen() {
               padding: 0,
               backgroundColor: 'white',
               fontWeight: '800',
-              fontSize: 22,
+              fontSize: 20,
               letterSpacing: 2,
+              color:'grey'
             }}>
-            " Cardian is ready to look for nearby vehicles to help you out in
-            case you are in any kind of danger. Do not worry, we will find you
-            and help you! "
+            " Press SOS for 3 seconds "
           </Text>
         )}
       </View>
