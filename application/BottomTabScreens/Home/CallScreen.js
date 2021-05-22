@@ -113,7 +113,7 @@ export default function CallScreen() {
         style={{
           flex: 1,
           justifyContent: 'flex-end',
-          marginBottom: '90%',
+          marginBottom: '50%',
         }}>
         {complete ? (
           <Image
