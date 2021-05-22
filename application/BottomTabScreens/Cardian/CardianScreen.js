@@ -18,7 +18,7 @@ const list = [
   {
     name: 'Daekyung Kim',
     avatar_url: 'https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/DaeK.png',
-    timeHelped: '03:32 AM',
+    timeHelped: '2021 / 05 / 23  03:32 AM',
     carNumber: 'Hyundai Avante, 9633',
     accidentLocation: 'Incheon, Songdo',
     phoneNumber: '010-2655-9573',
@@ -27,10 +27,28 @@ const list = [
   {
     name: 'Youngho Kim',
     avatar_url: 'https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/Youngh.png',
-    timeHelped: '11:43 PM',
+    timeHelped: '2021 / 03 / 02  11:43 PM',
     carNumber: 'Hyundai Sorento, 2763',
     accidentLocation: 'Seoul, Seocho',
     phoneNumber: '010-4853-7332',
+
+  },
+  {
+    name: 'Kwangmin Kim',
+    avatar_url: 'https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/KM.png',
+    timeHelped: '2021 / 01 / 23  01:32 AM',
+    carNumber: 'Benz CLS250d, 7777',
+    accidentLocation: 'Incheon, Songdo',
+    phoneNumber: '010-2871-1264',
+
+  },
+  {
+    name: 'Seojin Han',
+    avatar_url: 'https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/SeoJin.png',
+    timeHelped: '2021 / 01 / 04  11:12 AM',
+    carNumber: 'Porche Panamera, 9912',
+    accidentLocation: 'Incheon, Dongchun',
+    phoneNumber: '010-1216-9372',
 
   },
 ]
