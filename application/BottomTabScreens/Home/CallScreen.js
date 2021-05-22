@@ -18,14 +18,20 @@ import AntIcon from 'react-native-vector-icons/AntDesign';
 import WATCH_IMG from '../../assets/images/watch.png';
 
 import CircularComponent from './CircularComponent';
-import ButtonGage from './ButtonGage';
+
 const THEME_COLOR = 'salmon';
 
 export default function CallScreen() {
   const [opacity, setOpacity] = React.useState(0);
+  const [timer, setTimer] = React.useState(null);
 
-  function handleButtonColor() {
-    setOpacity(opacity + 0.01);
+  function addOne() {
+    setOpacity(opacity + 1);
+    setTimer(setTimeout(addOne, 50));
+  }
+
+  function stopTimer() {
+    clearTimeout(timer);
   }
 
   return (
@@ -66,7 +72,6 @@ export default function CallScreen() {
           Do not worry, we will find you and help you! "
         </Text> */}
       </View>
-      <ButtonGage />
       <View
         style={{
           flex: 1,
@@ -75,10 +80,10 @@ export default function CallScreen() {
         }}>
         <TouchableOpacity
           onPressIn={() => {
-            handleButtonColor();
+            addOne();
           }}
-          onPress={() => {
-            alert('help me');
+          onPressOut={() => {
+            stopTimer;
           }}>
           <View
             style={{
@@ -103,7 +108,7 @@ export default function CallScreen() {
                 letterSpacing: 10,
                 fontWeight: 'bold',
               }}>
-              SOS
+              SOS {opacity}
             </Text>
           </View>
         </TouchableOpacity>
