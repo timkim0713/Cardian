@@ -55,10 +55,10 @@ export default function CallScreen() {
               backgroundColor: 'white',
               fontWeight: '800',
               fontSize: 24,
-              letterSpacing: 2,
-              color: 'grey',
+              letterSpacing: 1,
+              color: 'salmon',
             }}>
-            " Press SOS for 3 seconds "
+            "Press SOS for 3 seconds"
           </Text>
         )}
       </View>
@@ -67,7 +67,7 @@ export default function CallScreen() {
       ) : (
         <View
           style={{
-            padding: 40,
+            padding: 20,
             alignItems: 'center',
           }}>
           <Text
@@ -80,7 +80,7 @@ export default function CallScreen() {
               letterSpacing: 2,
               color: 'grey',
             }}>
-            "ABCDEFGasfdsdadsafsadsfdaHIJK"
+            "ABCDEFGasafsadsfdaHIJK"
           </Text>
           <Text
             style={{
@@ -92,7 +92,7 @@ export default function CallScreen() {
               letterSpacing: 2,
               color: 'grey',
             }}>
-            "ABCDEFGHfsdfsfsdfIJK"
+            "ABCDEFGHfsdfIJK"
           </Text>
           <Text
             style={{
@@ -113,17 +113,17 @@ export default function CallScreen() {
         style={{
           flex: 1,
           justifyContent: 'flex-end',
-          marginBottom: '50%',
+          marginBottom: '90%',
         }}>
         {complete ? (
           <Image
             source={BREATHING_IMG}
             style={{
               position: 'absolute',
-              width: 400,
-              height: 400,
-              marginBottom: 0,
+              width: 450,
+              height: 450,
               alignContent: 'center',
+              marginLeft: -100,
             }}></Image>
         ) : (
           <></>
@@ -135,6 +135,7 @@ export default function CallScreen() {
             style={{
               width: 250,
               height: 250,
+              
               justifyContent: 'center',
               alignContent: 'center',
             }}></Image>
@@ -147,7 +148,7 @@ export default function CallScreen() {
                 style={{marginBottom: -18, marginLeft: -15}}></Image>
 
               <FillUpButton
-                increment={0.02}
+                increment={0.015}
                 buttonBackgroundColor={buttonColor}
                 fillupColor={'salmon'}
                 height={40}

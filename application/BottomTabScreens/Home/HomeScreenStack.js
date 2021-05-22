@@ -57,6 +57,7 @@ export default function HomeScreenStack({navigation, route}) {
     <Stack.Navigator
       screenOptions={{
         title: 'Home',
+        headerTintColor: 'black',
         // headerTitle: (props) => (
         //     <BuckeyHeaderComponent title={THREAD} color='primary' />
         // ),
