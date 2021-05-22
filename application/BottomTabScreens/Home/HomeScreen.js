@@ -94,8 +94,9 @@ export default function HomeScreen({navigation}) {
               backgroundColor: THEME_COLOR,
               fontWeight: '800',
               fontSize: 16,
+              color: 'black',
             }}>
-            CALL NEARBY VEHICLES
+            ASK FOR HELP
           </Text>
         </TouchableOpacity>
       </View>
