@@ -38,7 +38,7 @@ export default function CallScreen() {
 
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: complete ? 'rgb(241,242,243)' : 'white',
+        backgroundColor: 'white',
       }}>
       <View
         style={{

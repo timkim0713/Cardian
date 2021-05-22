@@ -12,6 +12,7 @@ import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import MATIcon from 'react-native-vector-icons/MaterialIcons';
 
 import {
   RecoilRoot,
@@ -20,12 +21,12 @@ import {
   useRecoilState,
   useRecoilValue,
 } from 'recoil';
-import {hideBottomTabRecoil} from './application/RecoilStates/recoilStates';
+import { hideBottomTabRecoil } from './application/RecoilStates/recoilStates';
 
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreenStack from './application/BottomTabScreens/Home/HomeScreenStack';
 import CardianScreenStack from './application/BottomTabScreens/Cardian/CardianScreenStack';
@@ -47,31 +48,31 @@ function Main() {
         tabBarOptions={
           hideBottomTab
             ? {
-                activeTintColor: ICON_COLOR,
-                inactiveTintColor: THEME_COLOR,
-                labelPosition: 'below-icon',
+              activeTintColor: ICON_COLOR,
+              inactiveTintColor: THEME_COLOR,
+              labelPosition: 'below-icon',
 
-                style: {
-                  opacity: 0, //---------------------------------HIDDEN
-                },
-                labelStyle: {
-                  fontSize: Platform.OS == 'android' ? 12 : 10,
-                },
-              }
+              style: {
+                opacity: 0, //---------------------------------HIDDEN
+              },
+              labelStyle: {
+                fontSize: Platform.OS == 'android' ? 12 : 10,
+              },
+            }
             : {
-                activeTintColor: ICON_COLOR,
-                inactiveTintColor: THEME_COLOR,
-                labelPosition: 'below-icon',
+              activeTintColor: ICON_COLOR,
+              inactiveTintColor: THEME_COLOR,
+              labelPosition: 'below-icon',
 
-                style: {
-                  height: Platform.OS == 'android' ? 70 : 70,
-                  paddingBottom: Platform.OS == 'android' ? 15 : 20,
-                  paddingTop: Platform.OS == 'android' ? 8 : 6,
-                },
-                labelStyle: {
-                  fontSize: Platform.OS == 'android' ? 12 : 10,
-                },
-              }
+              style: {
+                height: Platform.OS == 'android' ? 70 : 70,
+                paddingBottom: Platform.OS == 'android' ? 15 : 20,
+                paddingTop: Platform.OS == 'android' ? 8 : 6,
+              },
+              labelStyle: {
+                fontSize: Platform.OS == 'android' ? 12 : 10,
+              },
+            }
 
           // style: {
           //   height: Platform.OS == 'android' ? 70 : 70,
@@ -84,22 +85,23 @@ function Main() {
           // },
         }>
         <Tab.Screen
-          name="Home"
-          component={HomeScreenStack}
+          name="MyHero"
+          component={CardianScreenStack}
           options={{
-            tabBarLabel: 'Home',
-            tabBarIcon: ({color, size}) => (
-              <AntIcon name="home" color={color} size={28} />
+            tabBarLabel: 'My Heroes',
+            tabBarIcon: ({ color, size }) => (
+              <MATIcon name="supervisor-account" color={color} size={28} />
+              
             ),
           }}
         />
         <Tab.Screen
           name="CARDIAN"
-          component={CardianScreenStack}
+          component={HomeScreenStack}
           options={{
             tabBarLabel: 'CARDIAN',
-            tabBarIcon: ({color, size}) => (
-              <Image source={LOGO} style={{width: 30, height: 25}}></Image>
+            tabBarIcon: ({ color, size }) => (
+              <Image source={LOGO} style={{ width: 30, height: 25 }}></Image>
             ),
           }}
         />
@@ -108,7 +110,7 @@ function Main() {
           component={MyPageScreenStack}
           options={{
             tabBarLabel: 'My Page',
-            tabBarIcon: ({color, size}) => (
+            tabBarIcon: ({ color, size }) => (
               <AntIcon name="profile" color={color} size={26} />
             ),
           }}

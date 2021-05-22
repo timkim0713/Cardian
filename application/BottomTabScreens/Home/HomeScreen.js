@@ -37,8 +37,8 @@ export default function HomeScreen({ navigation }) {
           alignItems: 'flex-end',
           paddingRight: 25,
           paddingTop: 10,
-          borderTopColor: '#eaeaea',
-          borderTopWidth: 2,
+          // borderTopColor: '#eaeaea',
+          // borderTopWidth: 2,
         }}>
         <Text style={{ color: 'grey' }}>EDIT</Text>
         
@@ -47,8 +47,8 @@ export default function HomeScreen({ navigation }) {
         style={{
           alignItems: 'flex-start',
           flexDirection: 'row',
-          borderBottomColor: '#eaeaea',
-          borderBottomWidth: 2,
+          // borderBottomColor: '#eaeaea',
+          // borderBottomWidth: 2,
           paddingBottom: 25,
           paddingTop: 20,
         }}>
@@ -100,7 +100,7 @@ export default function HomeScreen({ navigation }) {
           flex: 1,
           justifyContent: 'flex-end',
           alignItems: 'center',
-          marginBottom: '15%',
+          marginBottom: '25%',
         }}>
         <TouchableOpacity
           onPress={() => {
@@ -115,6 +115,7 @@ export default function HomeScreen({ navigation }) {
               fontSize: 25,
               fontWeight: 'bold',
               color: 'black',
+
             }}>
             ASK FOR HELP
           </Text>
