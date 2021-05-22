@@ -23,6 +23,7 @@ export default function CallScreen() {
     <View
       style={{
         flex: 1,
+
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
@@ -88,6 +89,7 @@ export default function CallScreen() {
                 fontWeight: '800',
                 fontSize: 40,
                 letterSpacing: 10,
+                fontWeight: 'bold',
               }}>
               SOS
             </Text>

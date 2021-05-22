@@ -30,21 +30,39 @@ export default function HomeScreen({navigation}) {
         flex: 1,
         justifyContent: 'center',
         backgroundColor: 'white',
-        padding: 5,
+        paddingTop: '15%',
       }}>
-      <View style={{alignItems: 'flex-start', flexDirection: 'row'}}>
+      <View
+        style={{
+          alignItems: 'flex-end',
+          paddingRight: 25,
+          paddingTop: 10,
+          borderTopColor: '#eaeaea',
+          borderTopWidth: 2,
+        }}>
+        <Text style={{color: 'grey'}}>EDIT</Text>
+      </View>
+      <View
+        style={{
+          alignItems: 'flex-start',
+          flexDirection: 'row',
+          borderBottomColor: '#eaeaea',
+          borderBottomWidth: 2,
+          paddingBottom: 25,
+          paddingTop: 20,
+        }}>
         <ImageBackground source={WATCH_IMG} style={{width: 200, height: 300}}>
           <View
             style={{
               marginTop: 83,
               marginLeft: 44,
               padding: 10,
-              backgroundColor: 'red',
+              backgroundColor: 'black',
               width: 120,
               height: 140,
               borderRadius: 20,
             }}>
-            <Text style={{color: 'white', marginBottom: 8, fontSize: 12}}>
+            <Text style={{color: 'red', marginBottom: 8, fontSize: 12}}>
               Cardian Activated
             </Text>
             <Text style={{color: 'white', fontSize: 12}}>BPM: 0</Text>
@@ -52,14 +70,14 @@ export default function HomeScreen({navigation}) {
             <Text style={{color: 'white', fontSize: 12}}>Guardian Contact</Text>
             <Text style={{color: 'white', fontSize: 12}}>010-2673-0623</Text>
 
-            <Text style={{color: 'yellow', marginTop: 10}}>
+            <Text style={{color: THEME_COLOR, marginTop: 10}}>
               "I am Pregnant"
             </Text>
           </View>
         </ImageBackground>
 
-        <View style={{marginTop: 60, marginLeft: 5}}>
-          <Text style={{color: 'black', fontSize: 18, width: 160}}>
+        <View style={{marginTop: '10%', marginLeft: 5}}>
+          <Text style={{color: 'black', fontSize: 16, width: 160}}>
             " I am Pregnant and I want someone to take me to the hospital when I
             am in danger. "
           </Text>
@@ -90,10 +108,11 @@ export default function HomeScreen({navigation}) {
           <Text
             style={{
               borderRadius: 10,
-              padding: 20,
+              padding: 30,
               backgroundColor: THEME_COLOR,
               fontWeight: '800',
-              fontSize: 16,
+              fontSize: 25,
+              fontWeight: 'bold',
               color: 'black',
             }}>
             ASK FOR HELP
