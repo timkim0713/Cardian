@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Image,
   View,
+  Animated,
 } from 'react-native';
 import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,9 +17,17 @@ import AntIcon from 'react-native-vector-icons/AntDesign';
 
 import WATCH_IMG from '../../assets/images/watch.png';
 
+import CircularComponent from './CircularComponent';
+import ButtonGage from './ButtonGage';
 const THEME_COLOR = 'salmon';
 
 export default function CallScreen() {
+  const [opacity, setOpacity] = React.useState(0);
+
+  function handleButtonColor() {
+    setOpacity(opacity + 0.01);
+  }
+
   return (
     <View
       style={{
@@ -46,7 +55,7 @@ export default function CallScreen() {
           you are in any kind of danger. Do not worry, we will find you and help
           you! "
         </Text>
-
+        {/* <CircularComponent /> */}
         {/* <Text
           style={{
             backgroundColor: 'white',
@@ -57,7 +66,7 @@ export default function CallScreen() {
           Do not worry, we will find you and help you! "
         </Text> */}
       </View>
-
+      <ButtonGage />
       <View
         style={{
           flex: 1,
@@ -65,6 +74,9 @@ export default function CallScreen() {
           marginBottom: '35%',
         }}>
         <TouchableOpacity
+          onPressIn={() => {
+            handleButtonColor();
+          }}
           onPress={() => {
             alert('help me');
           }}>
