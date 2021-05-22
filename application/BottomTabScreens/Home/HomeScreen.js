@@ -56,10 +56,20 @@ export default function HomeScreen({navigation}) {
           </View>
         </ImageBackground>
 
-        <View style={{marginTop: 80}}>
-          <Text style={{color: 'black', fontSize: 15, width: 150}}>
-            I am Pregnant and I want someone to take me to the hospital when I
-            am in danger.
+        <View style={{marginTop: 60}}>
+          <Text style={{color: 'black', fontSize: 18, width: 150}}>
+            " I am Pregnant and I want someone to take me to the hospital when I
+            am in danger. "
+          </Text>
+
+          <Text
+            style={{marginTop: 20, color: 'black', fontSize: 18, width: 150}}>
+            " I will be very appreciate it if you save me. "
+          </Text>
+
+          <Text
+            style={{marginTop: 20, color: 'black', fontSize: 18, width: 150}}>
+            " I will surely pay you back with "
           </Text>
         </View>
       </View>

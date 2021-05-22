@@ -88,7 +88,7 @@ function Main() {
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({color, size}) => (
-              <MaterialIcon name="home" color={color} size={24} />
+              <AntIcon name="home" color={color} size={28} />
             ),
           }}
         />
@@ -96,7 +96,7 @@ function Main() {
           name="Cardian"
           component={CardianScreenStack}
           options={{
-            tabBarLabel: 'Cardian',
+            tabBarLabel: 'CARDIAN',
             tabBarIcon: ({color, size}) => (
               <Image source={LOGO} style={{width: 30, height: 25}}></Image>
             ),
@@ -106,9 +106,9 @@ function Main() {
           name="MyPage"
           component={MyPageScreenStack}
           options={{
-            tabBarLabel: 'MyPage',
+            tabBarLabel: 'My Page',
             tabBarIcon: ({color, size}) => (
-              <AntIcon name="profile" color={color} size={24} />
+              <AntIcon name="profile" color={color} size={26} />
             ),
           }}
         />
