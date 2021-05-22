@@ -16,55 +16,79 @@ const THEME_COLOR = '#242424';
 
 const list = [
   {
-    name: 'Daekyung Kim',
-    avatar_url: 'https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/DaeK.png',
-    timeHelped: '03:32 AM',
-    carNumber: 'Hyundai Avante, 9633',
-    accidentLocation: 'Incheon, Songdo',
-    phoneNumber: '010-2655-9573',
-
+    title: 'Personal Information',
+    icon: 'info-outline',
+    type: ''
   },
   {
-    name: 'Youngho Kim',
-    avatar_url: 'https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/Youngh.png',
-    timeHelped: '11:43 PM',
-    carNumber: 'Hyundai Sorento, 2763',
-    accidentLocation: 'Seoul, Seocho',
-    phoneNumber: '010-4853-7332',
-
+    title: 'Cardian List',
+    icon: 'playlist-add-check',
+    type: ''
+  },
+  {
+    title: 'Apple Watch Connetion',
+    icon: 'watch',
+    type: 'MaterialIcons'
+  },
+  {
+    title: 'Galaxy Watch Connection',
+    icon: 'watch',
+    type: 'Octicons'
+  },
+  {
+    title: 'SOS History',
+    icon: 'history',
+    type: ''
+  },
+  {
+    title: 'Cictize Heros',
+    icon: 'supervised-user-circle',
+    type: ''
   },
 ]
-
+const PROFILE = [
+  {
+    "name" : "Nahyun An",
+    "Age" : "22",
+    "Gender" : "Female",
+    "avatar_url": "https://raw.githubusercontent.com/timkim0713/Cardian/master/application/assets/images/anna.png"
+  }
+]
 export default function MyPageScreen() {
   return (
-    <View style={{flex: 1, backgroundColor: 'white'}}>
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
       <View>
         {
-          list.map((l, i) => (
+          PROFILE.map((l, i) => (
             <ListItem key={i} bottomDivider>
-              <View position="absolute" height={80}>
-                <MedalIcon
-                  name="medal"
-                  color={ICON_COLOR}
-                  size={30}
-                />
-              </View>
               <Avatar
                 size="large"
                 source={{ uri: l.avatar_url }} />
-
               <ListItem.Content>
-                <ListItem.Title>{l.name} / {l.phoneNumber}</ListItem.Title>
-                <ListItem.Subtitle><Text style={styles.ratingText}>Location: {l.accidentLocation}</Text></ListItem.Subtitle>
-                <ListItem.Subtitle><Text style={styles.ratingText}>Time: {l.timeHelped}</Text></ListItem.Subtitle>
-                <ListItem.Subtitle><Text style={styles.ratingText}>Car: {l.carNumber}</Text></ListItem.Subtitle>
+                <ListItem.Title>{l.name} / {l.Gender}</ListItem.Title>
+                <ListItem.Subtitle><Text style={styles.ratingText}>Age: {l.Age}</Text></ListItem.Subtitle>
+                <ListItem.Subtitle><Text style={styles.ratingText}></Text></ListItem.Subtitle>
+                <ListItem.Subtitle><Text style={styles.ratingText}></Text></ListItem.Subtitle>
               </ListItem.Content>
 
             </ListItem>
           ))
         }
       </View>
-    
+      <View>
+        {
+          list.map((item, i) => (
+            <ListItem key={i} bottomDivider>
+              <Icon name={item.icon} type={item.type} />
+              <ListItem.Content>
+                <ListItem.Title>{item.title}</ListItem.Title>
+              </ListItem.Content>
+              <ListItem.Chevron />
+            </ListItem>
+          ))
+        }
+      </View>
+
     </View>
   );
 }
