@@ -44,15 +44,17 @@ export default function HomeScreen({navigation}) {
               height: 140,
               borderRadius: 20,
             }}>
-            <Text style={{color: 'white', marginBottom: 8}}>
+            <Text style={{color: 'white', marginBottom: 8, fontSize: 12}}>
               Cardian Activated
             </Text>
-            <Text style={{color: 'white'}}>BPM: 0</Text>
-            <Text style={{color: 'white'}}>Blood Type:AB</Text>
-            <Text style={{color: 'white'}}>Guardian Contact</Text>
-            <Text style={{color: 'white'}}>010-2673-0623</Text>
+            <Text style={{color: 'white', fontSize: 12}}>BPM: 0</Text>
+            <Text style={{color: 'white', fontSize: 12}}>Blood Type:AB</Text>
+            <Text style={{color: 'white', fontSize: 12}}>Guardian Contact</Text>
+            <Text style={{color: 'white', fontSize: 12}}>010-2673-0623</Text>
 
-            <Text style={{color: 'yellow', margin: 10}}>I am Pregnant</Text>
+            <Text style={{color: 'yellow', marginTop: 10}}>
+              "I am Pregnant"
+            </Text>
           </View>
         </ImageBackground>
 
@@ -74,27 +76,29 @@ export default function HomeScreen({navigation}) {
         </View>
       </View>
 
-      <TouchableOpacity
-        onPress={() => {
-          goToCallScreen();
-        }}
+      <View
         style={{
           flex: 1,
           justifyContent: 'flex-end',
           alignItems: 'center',
           marginBottom: '15%',
         }}>
-        <Text
-          style={{
-            borderRadius: 10,
-            padding: 20,
-            backgroundColor: THEME_COLOR,
-            fontWeight: '800',
-            fontSize: 16,
+        <TouchableOpacity
+          onPress={() => {
+            goToCallScreen();
           }}>
-          CALL NEARBY VEHICLES
-        </Text>
-      </TouchableOpacity>
+          <Text
+            style={{
+              borderRadius: 10,
+              padding: 20,
+              backgroundColor: THEME_COLOR,
+              fontWeight: '800',
+              fontSize: 16,
+            }}>
+            CALL NEARBY VEHICLES
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
