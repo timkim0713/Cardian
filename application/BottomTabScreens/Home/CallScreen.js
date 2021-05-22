@@ -27,10 +27,6 @@ export default function CallScreen() {
         alignItems: 'center',
         backgroundColor: 'white',
       }}>
-      <View>
-        <Image source={WATCH_IMG} style={{width: 200, height: 300}}></Image>
-      </View>
-
       <TouchableOpacity
         onPress={() => {
           alert('help me');
@@ -44,7 +40,7 @@ export default function CallScreen() {
             fontWeight: '800',
             fontSize: 16,
           }}>
-          CALL NEARBY VEHICLES!
+          CALL NEARBY asdfasdfasdfVEHICLES!
         </Text>
       </TouchableOpacity>
     </View>

@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   Image,
+  ImageBackground,
   View,
 } from 'react-native';
 import FA5Icon from 'react-native-vector-icons/FontAwesome5';
@@ -28,18 +29,51 @@ export default function HomeScreen({navigation}) {
       style={{
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: 'white',
+        padding: 5,
       }}>
-      <View>
-        <Image source={WATCH_IMG} style={{width: 200, height: 300}}></Image>
+      <View style={{alignItems: 'flex-start', flexDirection: 'row'}}>
+        <ImageBackground source={WATCH_IMG} style={{width: 230, height: 350}}>
+          <View
+            style={{
+              marginTop: 97,
+              marginLeft: 48,
+              padding: 10,
+              backgroundColor: 'red',
+              width: 140,
+              height: 165,
+              borderRadius: 20,
+            }}>
+            <Text style={{color: 'white', marginBottom: 8}}>
+              Cardian Activated
+            </Text>
+            <Text style={{color: 'white'}}>BPM: 0</Text>
+            <Text style={{color: 'white'}}>Blood Type:AB</Text>
+            <Text style={{color: 'white'}}>Guardian Contact</Text>
+            <Text style={{color: 'white'}}>010-2673-0623</Text>
+
+            <Text style={{color: 'yellow', margin: 10}}>I am Pregnant</Text>
+          </View>
+        </ImageBackground>
+
+        <View style={{marginTop: 80}}>
+          <Text style={{color: 'black', fontSize: 15, width: 150}}>
+            I am Pregnant and I want someone to take me to the hospital when I
+            am in danger.
+          </Text>
+        </View>
       </View>
 
       <TouchableOpacity
         onPress={() => {
           goToCallScreen();
         }}
-        style={{flex: 1, justifyContent: 'flex-end', marginBottom: '15%'}}>
+        style={{
+          flex: 1,
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          marginBottom: '15%',
+        }}>
         <Text
           style={{
             borderRadius: 10,
