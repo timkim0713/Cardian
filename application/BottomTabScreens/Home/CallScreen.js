@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Image,
   View,
+  Animated,
 } from 'react-native';
 import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,9 +17,12 @@ import AntIcon from 'react-native-vector-icons/AntDesign';
 
 import WATCH_IMG from '../../assets/images/watch.png';
 
+import CircularComponent from './CircularComponent';
 const THEME_COLOR = 'salmon';
 
 export default function CallScreen() {
+  const scrollX = React.useRef(new Animated.Value(0)).current;
+
   return (
     <View
       style={{
@@ -46,7 +50,7 @@ export default function CallScreen() {
           you are in any kind of danger. Do not worry, we will find you and help
           you! "
         </Text>
-
+        <CircularComponent />
         {/* <Text
           style={{
             backgroundColor: 'white',
@@ -56,45 +60,6 @@ export default function CallScreen() {
           }}>
           Do not worry, we will find you and help you! "
         </Text> */}
-      </View>
-
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'flex-end',
-          marginBottom: '35%',
-        }}>
-        <TouchableOpacity
-          onPress={() => {
-            alert('help me');
-          }}>
-          <View
-            style={{
-              borderRadius: 100,
-              padding: 20,
-              backgroundColor: 'white',
-              borderColor: 'black',
-              borderWidth: 5,
-              fontWeight: '800',
-              fontSize: 16,
-              width: 200,
-              height: 200,
-            }}>
-            <Text
-              style={{
-                marginTop: 55,
-                textAlign: 'center',
-                padding: 0,
-                backgroundColor: 'white',
-                fontWeight: '800',
-                fontSize: 40,
-                letterSpacing: 10,
-                fontWeight: 'bold',
-              }}>
-              SOS
-            </Text>
-          </View>
-        </TouchableOpacity>
       </View>
     </View>
   );
