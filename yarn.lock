@@ -5674,6 +5674,11 @@ react-native-elements@3.4.1:
     react-native-ratings "^7.3.0"
     react-native-size-matters "^0.3.1"
 
+react-native-fill-up-button@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-fill-up-button/-/react-native-fill-up-button-1.0.3.tgz#89ee6dd74847071471877f31f7d9f8e7c9871564"
+  integrity sha512-l0IsdePK8uQFqLjfRVSWi3XOWxZfen43dv8p4YQtpVHc1IaJj2qwlf+zRzo9bCtbdZxyWq+Q5Wx4XOCG6/Gp7w==
+
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"

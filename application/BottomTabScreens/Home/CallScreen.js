@@ -10,6 +10,8 @@ import {
   View,
   Animated,
 } from 'react-native';
+import FillUpButton from 'react-native-fill-up-button';
+
 import FA5Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
@@ -22,17 +24,7 @@ import CircularComponent from './CircularComponent';
 const THEME_COLOR = 'salmon';
 
 export default function CallScreen() {
-  const [opacity, setOpacity] = React.useState(0);
-  const [timer, setTimer] = React.useState(null);
-
-  function addOne() {
-    setOpacity(opacity + 1);
-    setTimer(setTimeout(addOne, 50));
-  }
-
-  function stopTimer() {
-    clearTimeout(timer);
-  }
+  const [buttonComplete, setButtonComplete] = React.useState('SOS');
 
   return (
     <View
@@ -78,13 +70,21 @@ export default function CallScreen() {
           justifyContent: 'flex-end',
           marginBottom: '35%',
         }}>
-        <TouchableOpacity
-          onPressIn={() => {
-            addOne();
+        <FillUpButton
+          increment={0.01}
+          buttonBackgroundColor={'black'}
+          fillupColor={'salmon'}
+          height={150}
+          width={300}
+          buttonText={buttonComplete}
+          incrementSpeed={10}
+          buttonTextStyle={{fontSize: 20, color: 'white', fontWeight: 'bold'}}
+          activeOpacity={0.7}
+          onFilled={() => {
+            setButtonComplete('REQUEST SENT TO NEARBY VEHICLES');
           }}
-          onPressOut={() => {
-            stopTimer;
-          }}>
+        />
+        {/* <TouchableOpacity>
           <View
             style={{
               borderRadius: 100,
@@ -108,10 +108,10 @@ export default function CallScreen() {
                 letterSpacing: 10,
                 fontWeight: 'bold',
               }}>
-              SOS {opacity}
+              SOS
             </Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </View>
   );
