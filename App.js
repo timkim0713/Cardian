@@ -72,6 +72,7 @@ function Main() {
                   fontSize: Platform.OS == 'android' ? 12 : 10,
                 },
               }
+
           // style: {
           //   height: Platform.OS == 'android' ? 70 : 70,
           //   paddingBottom: Platform.OS == 'android' ? 15 : 20,

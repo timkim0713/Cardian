@@ -33,15 +33,15 @@ export default function HomeScreen({navigation}) {
         padding: 5,
       }}>
       <View style={{alignItems: 'flex-start', flexDirection: 'row'}}>
-        <ImageBackground source={WATCH_IMG} style={{width: 230, height: 350}}>
+        <ImageBackground source={WATCH_IMG} style={{width: 200, height: 300}}>
           <View
             style={{
-              marginTop: 97,
-              marginLeft: 48,
+              marginTop: 83,
+              marginLeft: 44,
               padding: 10,
               backgroundColor: 'red',
-              width: 140,
-              height: 165,
+              width: 120,
+              height: 140,
               borderRadius: 20,
             }}>
             <Text style={{color: 'white', marginBottom: 8}}>
@@ -56,8 +56,8 @@ export default function HomeScreen({navigation}) {
           </View>
         </ImageBackground>
 
-        <View style={{marginTop: 60}}>
-          <Text style={{color: 'black', fontSize: 18, width: 150}}>
+        <View style={{marginTop: 60, marginLeft: 5}}>
+          <Text style={{color: 'black', fontSize: 18, width: 160}}>
             " I am Pregnant and I want someone to take me to the hospital when I
             am in danger. "
           </Text>
