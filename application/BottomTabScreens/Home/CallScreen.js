@@ -135,7 +135,7 @@ export default function CallScreen() {
             style={{
               width: 250,
               height: 250,
-              
+
               justifyContent: 'center',
               alignContent: 'center',
             }}></Image>

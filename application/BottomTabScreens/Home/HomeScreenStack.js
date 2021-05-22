@@ -26,7 +26,7 @@ import {
 
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {hideBottomTabRecoil} from '../../RecoilStates/recoilStates';
+// import {hideBottomTabRecoil} from '../../RecoilStates/recoilStates';
 
 import HomeScreen from './HomeScreen';
 import CallScreen from './CallScreen';
@@ -37,21 +37,21 @@ const THEME_COLOR = '#242424';
 export default function HomeScreenStack({navigation, route}) {
   const Stack = createStackNavigator();
 
-  const [hideBottomTab, setHideBottomTab] = useRecoilState(hideBottomTabRecoil);
+  // const [hideBottomTab, setHideBottomTab] = useRecoilState(hideBottomTabRecoil);
 
-  React.useLayoutEffect(() => {
-    const routeName = getFocusedRouteNameFromRoute(route);
-    if (routeName === 'CallScreen') {
-      setHideBottomTab(true);
-      navigation.setOptions({
-        tabBarVisible: false,
-        tabBarOptions: {style: {opacity: 0, top: 50}},
-      });
-    } else {
-      setHideBottomTab(false);
-      navigation.setOptions({tabBarVisible: true});
-    }
-  }, [navigation, route]);
+  // React.useLayoutEffect(() => {
+  //   const routeName = getFocusedRouteNameFromRoute(route);
+  //   if (routeName === 'CallScreen') {
+  //     setHideBottomTab(true);
+  //     navigation.setOptions({
+  //       tabBarVisible: false,
+  //       tabBarOptions: {style: {opacity: 0, top: 50}},
+  //     });
+  //   } else {
+  //     setHideBottomTab(false);
+  //     navigation.setOptions({tabBarVisible: true});
+  //   }
+  // }, [navigation, route]);
 
   return (
     <Stack.Navigator
@@ -69,7 +69,7 @@ export default function HomeScreenStack({navigation, route}) {
         // headerTintColor: ICON_COLOR,
         // headerTintColor: ICON_COLOR,
       }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
       <Stack.Screen name="CallScreen" component={CallScreen} />
     </Stack.Navigator>
   );
