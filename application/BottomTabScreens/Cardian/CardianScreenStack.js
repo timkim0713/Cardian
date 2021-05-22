@@ -24,7 +24,7 @@ export default function CardianScreenStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        title: 'CARDIAN',
+        title: 'My Heroes',
         // headerTitle: (props) => (
         //     <BuckeyHeaderComponent title={THREAD} color='primary' />
         // ),

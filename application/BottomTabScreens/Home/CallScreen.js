@@ -9,6 +9,7 @@ import {
   Image,
   View,
   Animated,
+  LogBox,
 } from 'react-native';
 import FillUpButton from 'react-native-fill-up-button';
 
@@ -21,15 +22,25 @@ import SOS_IMG from '../../assets/images/sosRound.png';
 import CONNECTION_IMG from '../../assets/images/connection.gif';
 import BREATHING_IMG from '../../assets/images/breathing.gif';
 import ALERT_IMG from '../../assets/images/alert.png';
-
 import CircularComponent from './CircularComponent';
 
 const THEME_COLOR = 'salmon';
+
+LogBox.ignoreLogs(['Warning: ...']);
+LogBox.ignoreAllLogs();
 
 export default function CallScreen() {
   const [buttonComplete, setButtonComplete] = React.useState('SOS');
   const [buttonColor, setButtonColor] = React.useState('rgb(59,56,56)');
   const [complete, setComplete] = React.useState(false);
+
+  React.useEffect(() => {
+    return () => {
+      setButtonComplete('SOS');
+      setButtonColor('rgb(59,56,56)');
+      setComplete(false);
+    };
+  }, []);
 
   return (
     <View
