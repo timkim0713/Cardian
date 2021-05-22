@@ -24,12 +24,24 @@ export default class CircularComponent extends Component {
     Animated.loop(
       Animated.timing(this.animated, {
         toValue: 1,
-        duration: 4000,
+        duration: 2000,
         useNativeDriver: true,
         easing: Easing.linear,
       }),
     ).start();
   }
+
+  stopAnimation() {
+    Animated.loop(
+      Animated.timing(this.animated, {
+        toValue: 1,
+        duration: 3000,
+        useNativeDriver: true,
+        easing: Easing.linear,
+      }),
+    ).stop();
+  }
+
   render() {
     const transform = [{rotate: this.rotate}];
     const transform1 = [{rotate: this.rotateOpposite}];
@@ -37,24 +49,21 @@ export default class CircularComponent extends Component {
       <View style={styles.container}>
         <Animated.View style={[styles.item, {transform}]}>
           <Animated.View style={[styles.dot, {transform: transform1}]}>
-            <FAIcon name="car-side" size={24} />
+            <FAIcon name="car-side" size={30} color="salmon" />
           </Animated.View>
         </Animated.View>
         <View
           style={{
             flex: 1,
             justifyContent: 'flex-end',
-            marginBottom: '35%',
+            marginBottom: '45%',
           }}>
           <TouchableOpacity
             onPressIn={() => {
               this.animate();
             }}
-            // onPressOut={()=>{
-
-            // }}
-            onPress={() => {
-              alert('help me');
+            onPressOut={() => {
+              this.stopAnimation();
             }}>
             <View
               style={{
@@ -96,12 +105,13 @@ const styles = StyleSheet.create({
   },
   item: {
     position: 'absolute',
-    width: 100,
-    height: 200, // this is the diameter of circle
+    width: 50,
+    height: 300, // this is the diameter of circle
   },
   dot: {
     width: '100%',
-    height: 20,
+    height: 70,
+    padding: 0,
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
