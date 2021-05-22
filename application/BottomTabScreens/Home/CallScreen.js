@@ -62,49 +62,52 @@ export default function CallScreen() {
           </Text>
         )}
       </View>
-
-      <View
-        style={{
-          padding: 40,
-          alignItems: 'center',
-        }}>
-        <Text
+      {complete ? (
+        <></>
+      ) : (
+        <View
           style={{
-            marginTop: 55,
-            padding: 0,
-            backgroundColor: 'white',
-            fontWeight: '800',
-            fontSize: 20,
-            letterSpacing: 2,
-            color: 'grey',
+            padding: 40,
+            alignItems: 'center',
           }}>
-          "ABCDEFGasfdsdadsafsadsfdaHIJK"
-        </Text>
-        <Text
-          style={{
-            marginTop: 55,
-            padding: 0,
-            backgroundColor: 'white',
-            fontWeight: '800',
-            fontSize: 20,
-            letterSpacing: 2,
-            color: 'grey',
-          }}>
-          "ABCDEFGHfsdfsfsdfIJK"
-        </Text>
-        <Text
-          style={{
-            marginTop: 55,
-            padding: 0,
-            backgroundColor: 'white',
-            fontWeight: '800',
-            fontSize: 20,
-            letterSpacing: 2,
-            color: 'grey',
-          }}>
-          "ABCDEFGHIJK"
-        </Text>
-      </View>
+          <Text
+            style={{
+              marginTop: 55,
+              padding: 0,
+              backgroundColor: 'white',
+              fontWeight: '800',
+              fontSize: 20,
+              letterSpacing: 2,
+              color: 'grey',
+            }}>
+            "ABCDEFGasfdsdadsafsadsfdaHIJK"
+          </Text>
+          <Text
+            style={{
+              marginTop: 55,
+              padding: 0,
+              backgroundColor: 'white',
+              fontWeight: '800',
+              fontSize: 20,
+              letterSpacing: 2,
+              color: 'grey',
+            }}>
+            "ABCDEFGHfsdfsfsdfIJK"
+          </Text>
+          <Text
+            style={{
+              marginTop: 55,
+              padding: 0,
+              backgroundColor: 'white',
+              fontWeight: '800',
+              fontSize: 20,
+              letterSpacing: 2,
+              color: 'grey',
+            }}>
+            "ABCDEFGHasdfasdfsIJK"
+          </Text>
+        </View>
+      )}
 
       <View
         style={{
