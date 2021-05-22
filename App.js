@@ -94,7 +94,7 @@ function Main() {
           }}
         />
         <Tab.Screen
-          name="Cardian"
+          name="CARDIAN"
           component={CardianScreenStack}
           options={{
             tabBarLabel: 'CARDIAN',
