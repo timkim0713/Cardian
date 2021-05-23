@@ -46,7 +46,6 @@ export default function CallScreen() {
     <View
       style={{
         flex: 1,
-
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
@@ -69,10 +68,13 @@ export default function CallScreen() {
               letterSpacing: 1,
               color: 'salmon',
             }}>
-            "Press SOS for 3 seconds"
+            Press SOS for 3 seconds
           </Text>
         )}
       </View>
+
+
+
       {complete ? (
         <></>
       ) : (
@@ -87,11 +89,11 @@ export default function CallScreen() {
               padding: 0,
               backgroundColor: 'white',
               fontWeight: '800',
-              fontSize: 20,
-              letterSpacing: 2,
+              fontSize: 19,
+              letterSpacing: 1,
               color: 'grey',
             }}>
-            "ABCDEFGasafsadsfdaHIJK"
+            "Do You Meed Medical Assistance?"
           </Text>
           <Text
             style={{
@@ -99,64 +101,60 @@ export default function CallScreen() {
               padding: 0,
               backgroundColor: 'white',
               fontWeight: '800',
-              fontSize: 20,
+              fontSize: 19,
               letterSpacing: 2,
               color: 'grey',
             }}>
-            "ABCDEFGHfsdfIJK"
+            "Is Someone Stalking You?"
           </Text>
+
           <Text
             style={{
               marginTop: 55,
               padding: 0,
               backgroundColor: 'white',
               fontWeight: '800',
-              fontSize: 20,
+              fontSize: 19,
               letterSpacing: 2,
               color: 'grey',
             }}>
-            "ABCDEFGHasdfasdfsIJK"
+            "Do You Need a Cardian?"
           </Text>
         </View>
       )}
 
-      <View
+      {/* <View
         style={{
-          flex: 1,
-          justifyContent: 'flex-end',
-          marginBottom: '50%',
-        }}>
+          marginTop: '10%',
+        }}> */}
         {complete ? (
+          <View style={{flexDirection:'column', marginTop: '-25%',}}>
           <Image
             source={BREATHING_IMG}
             style={{
-              position: 'absolute',
               width: 450,
               height: 450,
               alignContent: 'center',
-              marginLeft: -100,
+              marginTop:-100
             }}></Image>
-        ) : (
-          <></>
-        )}
-
-        {complete ? (
-          <Image
+            <Image
             source={LOGO_IMG}
             style={{
+              position:'absolute',
               width: 250,
               height: 250,
-
-              justifyContent: 'center',
               alignContent: 'center',
+              alignSelf:'center',
             }}></Image>
+            </View>
+        
         ) : (
           <>
             {/* <Image source={SOS_IMG} style={{position: 'absolute'}}></Image> */}
-            <View style={{marginBottom: -50}}>
+            <View style={{ marginBottom: 0, marginTop: '20%', }}>
               <Image
                 source={ALERT_IMG}
-                style={{marginBottom: -18, marginLeft: -15}}></Image>
+                style={{ marginBottom: -18, marginLeft: -15 }}></Image>
 
               <FillUpButton
                 increment={0.015}
@@ -168,8 +166,8 @@ export default function CallScreen() {
                 incrementSpeed={10}
                 buttonTextStyle={
                   buttonComplete == 'SOS'
-                    ? {fontSize: 34, color: 'white', fontWeight: 'bold'}
-                    : {fontSize: 20, color: 'white', fontWeight: 'bold'}
+                    ? { fontSize: 34, color: 'white', fontWeight: 'bold' }
+                    : { fontSize: 20, color: 'white', fontWeight: 'bold' }
                 }
                 activeOpacity={0.8}
                 onFilled={() => {
@@ -182,14 +180,15 @@ export default function CallScreen() {
           </>
         )}
         {complete ? (
-          <Text style={{width: 250, color: 'grey', marginTop: 15}}>
-            * Emergency request has been sent to nearby vehicles. Please wait
-            until Cardians arrive.
+          <Text style={{ width: 400, color: 'grey', marginTop: -30, textAlign:'center', fontWeight:'700', fontSize:20}}>
+            FINDING NEARBY VERHICLES...
+            {/* * Emergency request has been sent to nearby vehicles. Please wait
+            until Cardians arrive. */}
           </Text>
         ) : (
           <></>
         )}
-      </View>
+      {/* </View> */}
     </View>
   );
 }

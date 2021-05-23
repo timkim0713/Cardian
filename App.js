@@ -59,6 +59,16 @@ function Main() {
             fontSize: Platform.OS == 'android' ? 12 : 10,
           },
         }}>
+          <Tab.Screen
+          name="CARDIAN"
+          component={HomeScreenStack}
+          options={{
+            tabBarLabel: 'CARDIAN',
+            tabBarIcon: ({color, size}) => (
+              <Image source={LOGO} style={{width: 30, height: 25}}></Image>
+            ),
+          }}
+        />
         <Tab.Screen
           name="MyHero"
           component={CardianScreenStack}
@@ -69,16 +79,7 @@ function Main() {
             ),
           }}
         />
-        <Tab.Screen
-          name="CARDIAN"
-          component={HomeScreenStack}
-          options={{
-            tabBarLabel: 'CARDIAN',
-            tabBarIcon: ({color, size}) => (
-              <Image source={LOGO} style={{width: 30, height: 25}}></Image>
-            ),
-          }}
-        />
+        
         <Tab.Screen
           name="MyPage"
           component={MyPageScreenStack}

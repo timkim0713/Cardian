@@ -36,7 +36,7 @@ const list = [
     type: ''
   },
   {
-    title: 'Apple Watch Connetion',
+    title: 'Smart Watch Connetion',
     icon: 'watch',
     type: 'MaterialIcons'
   },
