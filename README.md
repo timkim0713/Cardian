@@ -66,26 +66,37 @@ Once accepted, they become our Cardian.
 <img src = "https://github.com/timkim0713/Cardian/blob/master/images/app_features.jpeg" width="auto">
 
 # 🔥 Milestone 4
-  
+  - Video Creation & App Demo
+```
+https://www.youtube.com/watch?v=u4-eqjqWVGo
+```
+# Application Installation
+```
+Used Technology
+
+Android / iOS built using React Native 0.64
+Expected to use FMS and V2X Technology from AutoCrypt.
+
+
+Installation
+
+yarn install
+
+ANDROID
+yarn start
+yarn android
+
+IOS
+cd ios
+pod install
+yarn run ios
+```
 # Operating System
 ```
-All of the codes were written in the environment of Windows 10.
+All of the codes were written in the environment of Windows 10 and Mac OS.
 ```
 
 # Bug Tracking
 
 #### Any users can submit their bug report in "Github Issues" of our repository. 
-#### Check out the recent issues from : https://github.com/rxYoungho/X-ray-CT_scan_Covid-19_detection/issues
-
-# Dataset
-
-#### https://www.kaggle.com/anaselmasry/ct-images-for-covid-normal-pneumonia-mendeley
-#### https://drive.google.com/drive/folders/1LC_l4sVvoUgg2MsZ8veoeB8OY6v_vNiq?usp=sharing 
->(X-ray Dataset that is merged from public sources from: To be updated...)
-# Contribution
--------------------
-### Daekyung Kim
-###	Jey Kang
-###	Youngho Kim
-
-
+#### Check out the recent issues from : https://github.com/timkim0713/Cardian/issues
