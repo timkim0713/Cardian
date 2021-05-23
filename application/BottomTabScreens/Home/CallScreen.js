@@ -93,7 +93,7 @@ export default function CallScreen() {
               letterSpacing: 1,
               color: 'grey',
             }}>
-            "Do You Meed Medical Assistance?"
+            "Do You Need Medical Assistance?"
           </Text>
           <Text
             style={{
