@@ -9,7 +9,7 @@ Team Name: Zero Class
 
 Team Members: 
   - 🤰 Kwangmin Kim [Project Manager]
-  - 🐳 Seojin Han [Entepreneur]
+  - 🐳 Seojin Han [Entrepreneur]
   - 🦄 Nahyun An [Designer]
   - 🔥 Daekyung Kim [Developer]
   - 🌎 Youngho Kim [Developer]
