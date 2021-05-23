@@ -52,7 +52,7 @@ Once accepted, they become our Cardian.
 
 # 🔥 Milestone 2
 
-  - Prototyping and Problem Problem Solution
+  - Prototyping and Problem Solution
 ```
   ZeroClass provides the Emergency Assistant Matching Service, the Cardian, based on AutoCrypt’s FMS Data 
   and V2X Technologies. Cardian connects the vehicle and pedestrian who needs emergency help through vehicle 
@@ -82,14 +82,14 @@ Installation
 
 yarn install
 
-ANDROID
-yarn start
-yarn android
+@ANDROID
+$ yarn start
+$ yarn android
 
-IOS
-cd ios
-pod install
-yarn run ios
+@IOS
+$ cd ios
+$ pod install
+$ yarn run ios
 ```
 # Operating System
 ```
